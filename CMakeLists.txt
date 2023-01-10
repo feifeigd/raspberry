@@ -17,7 +17,8 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 subdirs(base)
 
 foreach(_target
-  01_Dule_color_LED)
+  01_Dule_color_LED
+  02_Rgb_Led)
 
   add_executable(${_target}
     ${_target}.cpp)
