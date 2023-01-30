@@ -19,7 +19,8 @@ subdirs(base)
 foreach(_target
   01_Dule_color_LED
   02_Rgb_Led
-  04_relay)
+  04_relay
+  05_laser)
 
   add_executable(${_target}
     ${_target}.cpp)
