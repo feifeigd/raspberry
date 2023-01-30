@@ -1,6 +1,7 @@
 #pragma once
 
 #include <softPwm.h>	// softPwmCreate
+#include <wiringPi.h>	// pinMode
 
 class Gpio{
 public:
@@ -12,6 +13,15 @@ public:
 	void PwmWrite(int value){
 		return softPwmWrite(pin_, value);
 	}
+
+	void PinMode(int mode){
+		pinMode(pin_, mode);
+	}
+
+	void DigitalWrite(int value){
+		digitalWrite(pin_, value);
+	}
+
 private:
 	int pin_{};
 };
