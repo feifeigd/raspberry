@@ -18,6 +18,10 @@ public:
 		pinMode(pin_, mode);
 	}
 
+	int DigitalRead(){
+		return digitalRead(pin_);
+	}
+	
 	void DigitalWrite(int value){
 		digitalWrite(pin_, value);
 	}
