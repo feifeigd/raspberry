@@ -21,7 +21,8 @@ foreach(_target
   02_Rgb_Led
   04_relay
   05_laser
-  06_Button)
+  06_Button
+  07_tilt_switch)
 
   add_executable(${_target}
     ${_target}.cpp)
