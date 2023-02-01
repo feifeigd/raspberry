@@ -25,7 +25,8 @@ foreach(_target
   07_tilt_switch
   08_vibration_switch
   09_active_buzzer
-  09_passive_buzzer)
+  09_passive_buzzer
+  10_reed_switch)
 
   add_executable(${_target}
     ${_target}.cpp)
