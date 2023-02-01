@@ -16,10 +16,11 @@ class Application: public base::Application{
 public:
 	bool init()override{
 		red_.PinMode(OUTPUT);
+		red_.DigitalWrite(HIGH);	// 高电平关闭
 		return true;
 	}
 
-	void loop(){
+	void loop(){//return;
 		while(true){
 			red_.DigitalWrite(LOW);	// 低电平触发
 			delay(500);

@@ -1,6 +1,8 @@
 #pragma once
 
 #include <softPwm.h>	// softPwmCreate
+#include <softTone.h>	// softToneWrite
+
 #include <wiringPi.h>	// pinMode
 
 class Gpio{
@@ -26,6 +28,13 @@ public:
 		digitalWrite(pin_, value);
 	}
 
+	int SoftToneCreate(){
+		return softToneCreate(pin_); // -1 失败
+	}
+
+	void SoftToneWrite(int freq){
+		softToneWrite(pin_, freq); // 频率
+	}
 private:
 	int pin_{};
 };
